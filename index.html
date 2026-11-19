@@ -1,0 +1,314 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ملف الطالب · وحدة الأثر</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: technical student dossier. Search home -> file page: identity band, KPI strip, journey matrix (subject x stage), evidence wall with video first, per-subject timelines. */
+:root{--bg:#F2EFF1;--surface:#FFFFFF;--panel:#F7F4F6;--ink:#19151A;--ink2:#52484F;--muted:#7A7077;--line:#DED7DB;--line2:#EBE5E8;
+--brand:#5B1A2E;--brand2:#7A2742;--hd:#3A0F1E;--hd2:#5B1A2E;--gold:#9A7426;--gold2:#E3C67E;--accent:#7A2742;--teal:#2E6E6A;--link:#1F5FBF;
+--c0:#D95926;--c1:#2A78D6;--c2:#199E70;--c0b:#FCEBE3;--c1b:#E5EFFB;--c2b:#DDF3EA;
+--s-none:#8E8589;--s-prog:#B7871C;--s-done:#1F8A5B;--up:#1F8A5B;--down:#C24A1A;
+--shadow:0 1px 2px rgba(30,15,25,.05),0 12px 32px rgba(30,15,25,.07);
+--pat:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 3l25 25-25 25L3 28z' fill='none' stroke='%23E3C67E' stroke-opacity='.16'/%3E%3Ccircle cx='28' cy='28' r='1.5' fill='%23E3C67E' fill-opacity='.35'/%3E%3C/svg%3E")}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120C10;--surface:#1B1519;--panel:#221A1F;--ink:#F3EDEF;--ink2:#C4BABF;--muted:#978C92;--line:#352B31;--line2:#2A2127;--brand:#8E2F4D;--brand2:#A53A5E;--hd:#1A0913;--hd2:#2B0F1C;--gold:#D9B565;--accent:#E69AAE;--teal:#5AB0AA;--link:#7FB0FF;--c0:#E8693A;--c1:#4A93EE;--c2:#25B382;--c0b:#3A2018;--c1b:#17283F;--c2b:#123227;--s-none:#8C8387;--s-prog:#D3A02E;--s-done:#2FB57A;--up:#3FBF8A;--down:#F08A5D;--shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#120C10;--surface:#1B1519;--panel:#221A1F;--ink:#F3EDEF;--ink2:#C4BABF;--muted:#978C92;--line:#352B31;--line2:#2A2127;--brand:#8E2F4D;--brand2:#A53A5E;--hd:#1A0913;--hd2:#2B0F1C;--gold:#D9B565;--accent:#E69AAE;--teal:#5AB0AA;--link:#7FB0FF;--c0:#E8693A;--c1:#4A93EE;--c2:#25B382;--c0b:#3A2018;--c1b:#17283F;--c2b:#123227;--s-none:#8C8387;--s-prog:#D3A02E;--s-done:#2FB57A;--up:#3FBF8A;--down:#F08A5D;--shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.4);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;line-height:1.65;direction:rtl;font-size:15px;overflow-x:clip;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body:before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:60}
+h1,h2,h3,h4{font-family:'Readex Pro','IBM Plex Sans Arabic',sans-serif;margin:0;line-height:1.3;font-weight:600;text-wrap:balance}
+button{font:inherit;color:inherit;cursor:pointer}a{color:var(--link)}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:2px}
+.mono{font-family:'Readex Pro',sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.wrap{max-width:1160px;margin:0 auto}
+.lbl{font-family:'Readex Pro';font-size:11.5px;letter-spacing:.06em;color:var(--muted);font-weight:500}
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));background:var(--hd);color:#F3E9EC;border-bottom:1px solid rgba(227,198,126,.35)}
+.top .in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:12px;height:56px}
+.mk{flex:none;width:36px;height:36px;border-radius:10px;border:1.5px solid var(--gold2);display:grid;place-items:center;background:rgba(255,255,255,.06)}
+.mk:after{content:"";width:13px;height:13px;border-radius:50%;border:3px solid var(--gold2)}
+.brand{display:flex;gap:11px;align-items:center;min-width:0}.brand b{display:block;font-family:'Readex Pro';font-size:14px;line-height:1.3;white-space:nowrap}.brand small{display:block;color:var(--gold2);font-size:11.5px;white-space:nowrap}
+.tools{margin-inline-start:auto;display:flex;gap:8px}
+.ib{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:11px;height:38px;padding:0 13px;font-weight:600;font-size:13.5px}
+.ib:hover{background:rgba(255,255,255,.17)}.ib svg{width:18px;height:18px}
+/* home */
+.hero{margin-top:18px;border-radius:22px;color:#fff;padding:36px clamp(18px,4vw,44px) 32px;position:relative;overflow:hidden;box-shadow:var(--shadow);background:radial-gradient(800px 340px at 92% -20%,rgba(184,146,63,.34),transparent 60%),linear-gradient(140deg,var(--hd) 0%,var(--hd2) 62%,#7A2742 120%)}
+.hero:before{content:"";position:absolute;inset:0;background:var(--pat);opacity:.9;pointer-events:none}
+.hero>*{position:relative}
+.hero h1{font-size:clamp(26px,4.4vw,42px);max-width:18ch}.hero p{margin:10px 0 0;color:#E9D9DE;max-width:60ch}
+.sbox{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.sin{flex:1 1 320px;position:relative}
+.sin input{width:100%;height:58px;border-radius:15px;border:2px solid rgba(227,198,126,.6);background:#fff;color:#19151A;font:inherit;font-size:17px;padding:0 54px 0 16px}
+.sin input:focus{outline:none;border-color:var(--gold2);box-shadow:0 0 0 4px rgba(227,198,126,.28)}
+.sin svg{position:absolute;inset-inline-start:auto;right:16px;top:17px;width:24px;height:24px;color:#5B1A2E}
+.fl{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.fl button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:5px 13px;font-size:13px;font-weight:500}
+.fl button.on{background:var(--gold2);color:#3A0F1E;border-color:var(--gold2);font-weight:700}
+.cnt{margin:18px 2px 8px;color:var(--ink2);font-size:13.5px}
+.res{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.rb{display:flex;align-items:center;gap:12px;text-align:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.rb:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.rb .av{flex:none;width:40px;height:40px;border-radius:12px;background:var(--hd2);color:var(--gold2);display:grid;place-items:center;font-family:'Readex Pro';font-weight:600}
+.rb .tx{min-width:0;flex:1}.rb .nm{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rb .gr{font-size:12.5px;color:var(--muted)}
+.rb .vc{flex:none;font-size:12px;font-weight:600;color:var(--c2);display:flex;gap:4px;align-items:center}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:26px 2px 10px}.sec-h h2{font-size:19px}.sec-h span{color:var(--muted);font-size:13px}
+/* file */
+.back{display:none;margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:11px;height:38px;padding:0 14px;font-weight:600;font-size:13.5px}
+.id{margin-top:12px;border-radius:22px;background:linear-gradient(140deg,var(--hd) 0%,var(--hd2) 70%,#7A2742 130%);color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow);padding:26px clamp(18px,4vw,36px)}
+.id:before{content:"";position:absolute;inset:0;background:var(--pat)}
+.id>*{position:relative}
+.id .row1{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.id .badge{font-family:'Readex Pro';font-size:11.5px;letter-spacing:.1em;color:var(--gold2);border:1px solid rgba(227,198,126,.5);border-radius:6px;padding:2px 8px}
+.id h1{font-size:clamp(24px,4vw,36px);margin-top:10px}
+.id .meta{margin-top:6px;display:flex;gap:8px;flex-wrap:wrap}
+.id .meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:2px 11px;font-size:13px}
+.id .score{margin-inline-start:auto;text-align:center;min-width:130px}
+.ring{--p:0;width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--gold2) calc(var(--p)*1%),rgba(255,255,255,.16) 0);display:grid;place-items:center;margin:0 auto}
+.ring i{font-style:normal;width:86px;height:86px;border-radius:50%;background:var(--hd);display:grid;place-items:center;font-family:'Readex Pro';font-size:24px;font-weight:700;color:#fff}
+.id .score small{display:block;margin-top:6px;color:#E9D9DE;font-size:12px}
+.kp{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:20px}
+.kp div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:13px;padding:11px 8px;text-align:center}
+.kp b{display:block;font-family:'Readex Pro';font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.kp span{font-size:12px;color:#E9D9DE;line-height:1.35;display:block;margin-top:3px}
+.kp .vd b{color:var(--gold2)}
+@media(max-width:720px){.kp{grid-template-columns:repeat(3,1fr)}.id .score{margin-inline-start:0}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px clamp(14px,3vw,24px);margin-top:16px;min-width:0}
+.card>h2{font-size:18px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card>h2 small{font-family:'IBM Plex Sans Arabic';font-weight:400;color:var(--muted);font-size:13px}
+.card>.sub{margin:4px 0 14px;color:var(--ink2);font-size:13.5px}
+/* matrix */
+.mx{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.mx table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px}
+.mx th,.mx td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line2);border-inline-start:1px solid var(--line2)}
+.mx thead th{background:var(--panel);font-family:'Readex Pro';font-size:11.5px;font-weight:600;color:var(--ink2);letter-spacing:.04em;white-space:nowrap}
+.mx th.sub,.mx td.sub{text-align:start;font-weight:600;white-space:nowrap;position:sticky;inset-inline-start:0;background:var(--surface)}
+.mx thead th.sub{background:var(--panel)}
+.mx tr:last-child td{border-bottom:0}
+.mx td small{display:block;color:var(--muted);font-size:11px;font-weight:400}
+.mx .sg th{background:var(--panel)}
+.ch{display:inline-block;padding:2px 11px;border-radius:999px;font-weight:700;font-size:12.5px}
+.ch.k0{background:var(--c0b);color:var(--c0)}.ch.k1{background:var(--c1b);color:var(--c1)}.ch.k2{background:var(--c2b);color:var(--c2)}
+.ch.x{background:var(--line2);color:var(--muted);font-weight:500}
+.st{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;white-space:nowrap}
+.st i{width:9px;height:9px;border-radius:50%;background:var(--s-none);flex:none}
+.st.p i{background:var(--s-prog)}.st.d i{background:var(--s-done)}
+.st.p{color:var(--s-prog)}.st.d{color:var(--s-done)}.st.n{color:var(--s-none)}
+.pl{display:inline-block;margin-inline-start:4px;color:var(--c2);font-size:11px;font-weight:700}
+.arrow{font-weight:700;margin:0 3px}.arrow.up{color:var(--up)}.arrow.dn{color:var(--down)}.arrow.eq{color:var(--muted)}
+.lg{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;color:var(--ink2);font-size:12.5px}
+.sum{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.sum div{flex:1 1 150px;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:10px 14px}
+.sum b{font-family:'Readex Pro';font-size:22px;display:block;line-height:1.2}.sum span{font-size:12.5px;color:var(--ink2)}
+.sum .u b{color:var(--up)}.sum .d b{color:var(--down)}
+/* evidence wall */
+.ew{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.ev{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ev.v{border-color:color-mix(in srgb,var(--c2) 45%,var(--line));background:linear-gradient(180deg,var(--c2b),var(--panel) 70%)}
+.ev .h{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.ev .h b{font-family:'Readex Pro';font-size:14.5px}
+.ev .tg{font-size:11px;font-weight:700;border-radius:6px;padding:1px 8px;background:var(--line2);color:var(--ink2);white-space:nowrap}
+.ev.v .tg{background:var(--c2);color:#fff}
+.ev .m{font-size:12.5px;color:var(--ink2)}
+.ev .tx{font-size:13px;color:var(--ink);overflow-wrap:anywhere}
+.play{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;height:42px;border-radius:11px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+.play:hover{background:var(--brand2)}
+.play svg{width:16px;height:16px}
+.ev:not(.v) .play{background:transparent;color:var(--link);border:1px solid var(--line)}
+.ev:not(.v) .play:hover{border-color:var(--link)}
+.none{color:var(--muted);padding:10px 2px;font-size:14px}
+/* subject timelines */
+.sj{border:1px solid var(--line);border-radius:16px;margin-top:14px;overflow:hidden}
+.sj>.hd{display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap;background:var(--panel);padding:12px 16px;border-bottom:1px solid var(--line)}
+.sj>.hd h3{font-size:17px;color:var(--accent)}.sj>.hd .t{font-size:13.5px;color:var(--ink2)}.sj>.hd .t b{color:var(--ink)}
+.sj>.hd .jn{margin-inline-start:auto;display:flex;align-items:center;flex-wrap:wrap}
+.tl{padding:16px 16px 6px;position:relative}
+.nd{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px}
+.nd:before{content:"";position:absolute;inset-inline-start:16px;top:30px;bottom:-2px;width:2px;background:var(--line)}
+.nd:last-child:before{display:none}
+.dot{width:34px;height:34px;display:grid;place-items:center;font-family:'Readex Pro';font-size:12px;font-weight:700;border:2px solid var(--line);background:var(--surface);color:var(--ink2);border-radius:50%;position:relative;z-index:1}
+.dot.k0{border-color:var(--c0);color:var(--c0)}.dot.k1{border-color:var(--c1);color:var(--c1)}.dot.k2{border-color:var(--c2);color:var(--c2)}
+.dot.sp{border-radius:9px;transform:rotate(45deg)}.dot.sp>span{transform:rotate(-45deg)}
+.dot.sp.n{border-color:var(--s-none)}.dot.sp.p{border-color:var(--s-prog);color:var(--s-prog)}.dot.sp.d{border-color:var(--s-done);color:var(--s-done)}
+.nb{min-width:0}
+.nb .ttl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-weight:700;font-family:'Readex Pro';font-size:14.5px}
+.nb .ttl em{font-style:normal;font-weight:400}
+.nb .kv{margin-top:6px;display:grid;gap:6px}
+.nb .kv div{display:grid;grid-template-columns:112px minmax(0,1fr);gap:10px;font-size:14px}
+.nb .kv u{text-decoration:none;color:var(--muted);font-size:12.5px;font-weight:500;padding-top:1px}
+.nb .kv span{overflow-wrap:anywhere}
+@media(max-width:520px){.nb .kv div{grid-template-columns:1fr;gap:0}}
+.vbtn{display:inline-flex;align-items:center;gap:6px;border-radius:9px;padding:3px 11px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:12.5px;margin-inline-end:6px}
+.vbtn svg{width:13px;height:13px;flex:none}.vbtn{white-space:nowrap}
+.vbtn.o{background:transparent;color:var(--link);border:1px solid var(--line)}
+.xt{border-top:1px dashed var(--line);padding:12px 16px;display:grid;gap:6px;background:var(--panel)}
+.xt div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px;font-size:13.5px}.xt u{text-decoration:none;color:var(--muted);font-size:12.5px}
+@media(max-width:520px){.xt div{grid-template-columns:1fr;gap:0}}
+.zero{color:var(--muted);padding:6px 0 14px;font-size:13.5px}
+.foot{margin:28px 0 36px;text-align:center;color:var(--muted);font-size:12.5px}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* gate */
+body:not(.open) .top,body:not(.open) main{display:none}
+.gate{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;overflow:auto;background:var(--hd);background-image:var(--pat)}
+.gate[hidden]{display:none}
+.gc{width:min(100%,420px);background:var(--surface);color:var(--ink);border:1px solid rgba(227,198,126,.55);border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:hidden}
+.gc .gh{background:linear-gradient(135deg,#3A0F1E,#5B1A2E 60%,#7A2742);color:#fff;padding:26px 26px 22px;text-align:center}
+.gc .gh .mk{margin:0 auto 12px;width:52px;height:52px;border-radius:15px}.gc .gh .mk:after{width:20px;height:20px;border-width:4px}
+.gc .gh h1{font-size:24px}.gc .gh p{margin:6px 0 0;color:var(--gold2);font-size:13.5px}
+.gc form{padding:22px 26px 26px;display:grid;gap:14px}
+.gc label{display:grid;gap:6px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.gc input{height:50px;border-radius:13px;border:2px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:16px;padding:0 14px}
+.gc input:focus{border-color:var(--gold);outline:none}
+.gc .pw{position:relative}.gc .pw input{width:100%;padding-inline-end:70px}
+.gc .pw button{position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--accent);font-size:13px;font-weight:600;padding:6px 8px}
+.gc .go{height:50px;border-radius:13px;border:1px solid var(--brand);background:var(--brand);color:#fff;font-weight:700;font-size:16px}
+.gc .go:disabled{opacity:.6;cursor:wait}
+.gc .er{min-height:22px;color:var(--down);font-size:13.5px;font-weight:600;text-align:center}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="gate" id="gate"><div class="gc">
+ <div class="gh"><div class="mk"></div><h1>ملف الطالب</h1><p>مدارس النبلاء الأهلية · وحدة الأثر</p></div>
+ <form id="gf" autocomplete="on">
+  <label for="gu">اسم المستخدم<input id="gu" name="username" type="text" autocomplete="username" required></label>
+  <label for="gp">كلمة المرور<span class="pw"><input id="gp" name="password" type="password" autocomplete="current-password" required><button type="button" id="gt">إظهار</button></span></label>
+  <div class="er" id="ge" role="alert"></div>
+  <button class="go" id="gb" type="submit">دخول</button>
+ </form>
+</div></div>
+
+<header class="top"><div class="in">
+ <div class="brand"><div class="mk"></div><div><b>مدارس النبلاء الأهلية</b><small>وحدة الأثر · ملف الطالب</small></div></div>
+ <div class="tools" hidden><button class="ib" id="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>بحث عن طالب</button></div>
+</div></header>
+<main><div class="wrap" id="app"></div></main>
+
+<script>
+const ENC={"s":"UDMrcbmd+66eoJ+/oLc2ew==","v":"fQsTAR2jMiJgJZvU","i":250000,"c":"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"};
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function openData(u,p){
+ const enc=new TextEncoder();
+ const km=await crypto.subtle.importKey('raw',enc.encode(u.trim().normalize('NFC')+'\u0000'+p),'PBKDF2',false,['deriveKey']);
+ const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(ENC.s),iterations:ENC.i,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+ const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(ENC.v)},key,b64(ENC.c));
+ return JSON.parse(new TextDecoder().decode(pt));
+}
+(function(){
+ const g=id=>document.getElementById(id);
+ g('gt').onclick=()=>{const t=g('gp').type==='password';g('gp').type=t?'text':'password';g('gt').textContent=t?'إخفاء':'إظهار'};
+ g('gf').addEventListener('submit',async e=>{
+  e.preventDefault();g('ge').textContent='';
+  if(!(window.crypto&&crypto.subtle)){g('ge').textContent='افتح الملف من رابط آمن (https) ليعمل الدخول.';return}
+  g('gb').disabled=true;g('gb').textContent='جارٍ التحقق…';
+  try{const D=await openData(g('gu').value,g('gp').value);
+   g('gate').hidden=true;document.body.classList.add('open');g('gp').value='';start(D);
+  }catch(err){g('ge').textContent='اسم المستخدم أو كلمة المرور غير صحيحة.';g('gb').disabled=false;g('gb').textContent='دخول';g('gp').select()}
+ });
+ g('gu').focus();
+})();
+function start(D){
+const S=D.S,U=D.U,F=D.F,SUBJ=D.SUBJ;
+const RK={دعم:0,نمو:1,تميز:2},CLS=['دعم','نمو','تميز'];
+const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const GN=[];D.STAGES.forEach((s,i)=>D.SECS.forEach((c,j)=>GN[i*2+j]=s+' · '+c));
+const ORDER=[2,3,0,1,4,5];
+const stu=D.stu.map((a,id)=>({id,name:a[0].trim(),g:a[1]*2+a[2],grade:a[3],data:a[4].map(r=>{const v={},l={};for(const k in r[1])v[F[k]]=S[r[1][k]];for(const k in r[2])l[F[k]]=U[r[2][k]];return{subj:SUBJ[r[0]],v,l,has:Object.keys(v).some(k=>k!=='teacher')}})}));
+const norm=t=>String(t).replace(/[ً-ٰٟـ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/\s+/g,' ').trim().toLowerCase();
+stu.forEach(s=>s.n=norm(s.name));
+const urls=t=>(String(t||'').match(/https?:\/\/[^\s<>)]+/g)||[]);
+const isVid=(u,ctx)=>/youtu|\.mp4|2u\.pw|h1\.nu|\/file\/d\/|فيديو|video/i.test(u+' '+(ctx||''));
+const ORD=['الأول','الثاني','الثالث'];
+const last=v=>(v.f2&&RK[v.f2]!==undefined)?v.f2:v.f1;
+/* derive evidence + metrics */
+stu.forEach(s=>{
+ s.ev=[];const m={nd:0,nsup:0,ncomp:0,nev:0,nvid:0,nup:0,same:0,down:0,prog:0,done:0,sups:0};
+ s.data.forEach(o=>{if(!o.has)return;m.nd++;const v=o.v;
+  const sts=[1,2,3].map(k=>v['st'+k]).filter(Boolean);
+  if(sts.length)m.nsup++;if(sts.length&&sts.every(t=>t==='مكتمل'))m.ncomp++;
+  m.sups+=sts.length;m.done+=sts.filter(t=>t==='مكتمل').length;
+  o.ev=[];
+  [1,2,3].forEach(k=>{const txt=v['ev'+k]||'';const set=[];urls(txt).forEach(u=>set.indexOf(u)<0&&set.push(u));if(o.l['ev'+k]&&set.indexOf(o.l['ev'+k])<0)set.push(o.l['ev'+k]);
+   const clean=txt.replace(/https?:\/\/[^\s<>)]+/g,'').trim();
+   if(set.length||clean){const e={subj:o.subj,k,teacher:v.teacher,urls:set,txt:clean,vid:set.some(u=>isVid(u,clean)),sup:v['sup'+k]};o.ev.push(e);s.ev.push(e)}});
+  if(o.ev.some(e=>e.urls.length))m.nev++;
+  const L=last(v);if(RK[v.diag]!==undefined&&RK[L]!==undefined){m.prog++;if(RK[L]>RK[v.diag])m.nup++;else if(RK[L]<RK[v.diag])m.down++;else m.same++}
+ });
+ m.nvid=s.ev.filter(e=>e.vid).length;m.nlinks=s.ev.reduce((a,e)=>a+e.urls.length,0);
+ /* depth score 0-100: coverage of subjects by support, completion, evidence, video, rise */
+ const d=Math.max(m.nd,1);
+ m.score=Math.min(100,Math.round(30*m.nsup/d+25*m.ncomp/d+20*m.nev/d+(m.nvid?10:0)+15*(m.prog?m.nup/m.prog:0)));
+ s.m=m;
+});
+const $=id=>document.getElementById(id),app=$('app');
+const chip=c=>c&&RK[c]!==undefined?`<span class="ch k${RK[c]}">${c}</span>`:`<span class="ch x">—</span>`;
+const stc=t=>{const k=t==='مكتمل'?'d':t==='قيد التنفيذ'?'p':'n';return `<span class="st ${k}"><i></i>${esc(t)}</span>`};
+const PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 001.5.86l12-7.5a1 1 0 000-1.72l-12-7.5A1 1 0 007 4.5z"/></svg>';
+function journey(v){const seq=[v.diag,v.f1,v.f2];let out='',prev=null;
+ if(!seq.some(x=>RK[x]!==undefined))return '<span class="ch x">بلا تصنيف</span>';
+ seq.forEach(c=>{if(RK[c]===undefined)return;if(prev!==null){const d=RK[c]-RK[prev];out+=`<span class="arrow ${d>0?'up':d<0?'dn':'eq'}">${d>0?'↗':d<0?'↘':'→'}</span>`}out+=chip(c);prev=c});return out}
+const linkBtns=(us,ctx)=>us.map((u,i)=>`<a class="vbtn ${isVid(u,ctx)?'':'o'}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${isVid(u,ctx)?PLAY+' فيديو الأثر':'شاهد الأثر ↗'}${us.length>1?' '+(i+1):''}</a>`).join('');
+const linkify=t=>esc(t).replace(/(https?:\/\/[^\s<]+)/g,u=>`<a href="${u}" target="_blank" rel="noopener noreferrer">فتح الرابط ↗</a>`);
+const mt=(c,m)=>m?`<div><u>مطابقة التصنيف</u><span>${(m==='مطابق'||m===c)?'مطابق':(c?'غير مطابق، المقترح ':'')+chip(m)}</span></div>`:'';
+/* ---------- home ---------- */
+let fg=-1,q='';
+function home(){
+ app.innerHTML=`<section class="hero"><div class="lbl" style="color:var(--gold2)">UNIT · الأثر · IMPACT FILE</div><h1>ملف الطالب الأثري</h1><p>ابحث باسم الطالب لتفتح ملفه الكامل: من الاختبار التشخيصي، إلى الدعم المقدَّم، إلى الأثر الذي تحقق، مع شواهده وفيديوهاته.</p>
+ <div class="sbox"><div class="sin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="اكتب اسم الطالب…" autocomplete="off" aria-label="اسم الطالب"></div></div>
+ <div class="fl" id="fl"></div></section><div id="out"></div><div class="foot">إعداد: حسين عجينه · وحدة الأثر · مدارس النبلاء الأهلية</div>`;
+ $('q').value=q;$('q').oninput=e=>{q=e.target.value;list()};
+ $('fl').onclick=e=>{const b=e.target.closest('button');if(!b)return;fg=+b.dataset.g;fl();list()};
+ fl();list();setTimeout(()=>{try{$('q').focus({preventScroll:true})}catch(e){}},50)}
+function fl(){$('fl').innerHTML=['كل الأقسام',...GN].map((n,i)=>`<button data-g="${i-1}" class="${fg===i-1?'on':''}">${n}</button>`).join('')}
+const rowBtn=s=>`<button class="rb" data-id="${s.id}"><div class="av">${esc(s.name.trim().charAt(0))}</div><div class="tx"><div class="nm">${esc(s.name)}</div><div class="gr">${esc(s.grade)} · ${GN[s.g]}</div></div>${s.m.nvid?`<div class="vc">${PLAY.replace('<svg','<svg width="12" height="12"')}${s.m.nvid}</div>`:''}</button>`;
+function list(){const toks=norm(q).split(' ').filter(Boolean);const out=$('out');
+ if(!toks.length&&fg<0){
+  const by={};D.feat.forEach(id=>{(by[stu[id].g]=by[stu[id].g]||[]).push(stu[id])});
+  out.innerHTML=`<div class="sec-h"><h2>ملفات نموذجية</h2><span>أقوى الطلاب جهداً في كل قسم</span></div>`+ORDER.filter(g=>by[g]).map(g=>`<div class="cnt" style="font-weight:600;color:var(--accent)">${GN[g]}</div><div class="res">${by[g].map(rowBtn).join('')}</div>`).join('')}
+ else{let l=stu.filter(s=>(fg<0||s.g===fg)&&toks.every(t=>s.n.includes(t)));const tot=l.length;l=l.slice(0,60);
+  out.innerHTML=`<div class="cnt">${tot.toLocaleString('en-US')} طالباً${tot>60?' · يظهر أول 60، أضف حرفاً لتضييق النتائج':''}</div><div class="res">${l.map(rowBtn).join('')}</div>`}
+ out.onclick=e=>{const b=e.target.closest('.rb');if(b)location.hash='s'+b.dataset.id}}
+/* ---------- file ---------- */
+function stepNode(kind,cls,label,title,badge,body){return `<div class="nd"><div class="dot ${kind==='t'?'k'+cls:'sp '+cls}"><span>${label}</span></div><div class="nb"><div class="ttl">${title}${badge?`<em>${badge}</em>`:''}</div>${body?`<div class="kv">${body}</div>`:''}</div></div>`}
+function subjBlock(o){const v=o.v;let h='';const f=(lab,val)=>val?`<div><u>${lab}</u><span>${linkify(val)}</span></div>`:'';
+ const tn=(rk,title,c,gap,match)=>{if(!(c||gap||match))return '';return stepNode('t',RK[c]!==undefined?RK[c]:'x',RK[c]!==undefined?['د','ن','ت'][RK[c]]:'؟',title,chip(c),f('الفجوة والاحتياج',gap)+mt(c,match))};
+ const sp=k=>{const ev=o.ev.filter(e=>e.k===k)[0];if(!(v['sup'+k]||v['st'+k]||ev))return '';
+  const t=v['st'+k];const kk=t==='مكتمل'?'d':t==='قيد التنفيذ'?'p':'n';
+  let b=(v['sup'+k]?`<div><u>ما قُدِّم</u><span>${esc(v['sup'+k])}</span></div>`:'');
+  if(ev)b+=`<div><u>شاهد الأثر</u><span>${ev.txt?esc(ev.txt)+' ':''}${linkBtns(ev.urls,ev.txt)}</span></div>`;
+  b+=f('الأثر المتحقق',v['imp'+k]);
+  return stepNode('s',kk,'د'+k,'الدعم المقدَّم '+ORD[k-1],t?stc(t):'',b)};
+ h+=tn(0,'الاختبار التشخيصي (القياس القبلي)',v.diag,v.gap0,v.diag_match);h+=sp(1);
+ h+=tn(1,'الاختبار التكويني الأول',v.f1,v.gap1,v.f1_match);h+=sp(2);
+ h+=tn(2,'الاختبار التكويني الثاني',v.f2,v.gap2,v.f2_match);h+=sp(3);
+ const x=(v.gap_open?`<div><u>فجوات لم تُعالَج</u><span>${linkify(v.gap_open)}</span></div>`:'')+(v.influence?`<div><u>مؤثرات في التقدم</u><span>${linkify(v.influence)}</span></div>`:'')+(v.talent?`<div><u>الموهبة</u><span>${linkify(v.talent)} ${linkBtns(urls(v.talent_ev).concat(o.l.talent_ev&&urls(v.talent_ev).indexOf(o.l.talent_ev)<0?[o.l.talent_ev]:[]),'')}</span></div>`:'');
+ return `<div class="sj"><div class="hd"><h3>${o.subj}</h3><div class="t">المعلم: <b>${v.teacher?esc(v.teacher):'غير مسجّل'}</b></div><div class="jn">${journey(v)}</div></div><div class="tl">${h||'<div class="zero">لم يُسجَّل في هذه المادة سوى اسم المعلم.</div>'}</div>${x?`<div class="xt">${x}</div>`:''}</div>`}
+function matrix(s){
+ const rows=s.data.filter(o=>o.has).map(o=>{const v=o.v;
+  const cell=k=>{const t=v['st'+k],e=o.ev.some(x=>x.k===k&&x.urls.length),vd=o.ev.some(x=>x.k===k&&x.vid);return (t||e)?`${t?stc(t):''}${e?`<span class="pl">${vd?'▶ فيديو':'📎'}</span>`:''}`:'<span class="ch x">—</span>'};
+  return `<tr><td class="sub">${o.subj}<small>${v.teacher?esc(v.teacher):'—'}</small></td><td>${chip(v.diag)}</td><td>${cell(1)}</td><td>${chip(v.f1)}</td><td>${cell(2)}</td><td>${chip(v.f2)}</td><td>${cell(3)}</td></tr>`}).join('');
+ return `<div class="mx"><table><thead><tr><th class="sub">المادة</th><th>① التشخيصي</th><th>الدعم 1</th><th>② التكويني 1</th><th>الدعم 2</th><th>③ التكويني 2</th><th>الدعم 3</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <div class="lg"><span>${chip('دعم')} ${chip('نمو')} ${chip('تميز')} تصنيف الطالب</span><span><span class="st d"><i></i>مكتمل</span> <span class="st p"><i></i>قيد التنفيذ</span> <span class="st n"><i></i>لم يبدأ</span></span><span><span class="pl">▶ فيديو</span> شاهد فيديو للدعم</span></div>`}
+function file(id){const s=stu[id];if(!s){location.hash='';return}
+ const m=s.m,shown=s.data.filter(o=>o.has),rest=SUBJ.filter(sj=>!shown.some(o=>o.subj===sj));
+ const evs=s.ev.filter(e=>e.urls.length).sort((a,b)=>(b.vid-a.vid)||(a.k-b.k));
+ const kp=[[m.nd,'مواد لها رصد'],[m.nsup,'مواد بدعم مسجّل'],[m.ncomp,'مواد اكتمل دعمها'],[m.nev,'مواد بشاهد أثر'],[m.nvid,'شاهد فيديو'],[m.nup,'مواد ارتقى فيها']];
+ app.innerHTML=`<button class="back" id="bk">→ العودة للبحث</button>
+ <section class="id"><div class="row1"><div><span class="badge">IMPACT FILE · #${String(s.id+1).padStart(4,'0')}</span><h1>${esc(s.name)}</h1><div class="meta"><span>${esc(s.grade)}</span><span>${GN[s.g]}</span></div></div>
+  <div class="score"><div class="ring" style="--p:${m.score}"><i>${m.score}</i></div><small>مؤشر عمق الأثر من 100</small></div></div>
+  <div class="kp">${kp.map((x,i)=>`<div class="${i===4?'vd':''}"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></section>
+ <section class="card"><h2>خريطة الرحلة <small>من القياس القبلي إلى ما بعد التكويني</small></h2><p class="sub">كل مادة في صف واحد: التشخيصي، ثم الدعم، ثم التكويني، بالترتيب الزمني.</p>
+  ${m.prog?`<div class="sum"><div class="u"><b>${m.nup}</b><span>مواد ارتقى فيها التصنيف</span></div><div><b>${m.same}</b><span>مواد ثبت تصنيفها</span></div><div class="d"><b>${m.down}</b><span>مواد تراجع تصنيفها</span></div><div><b>${m.done}/${m.sups}</b><span>دعماً مكتملاً من المسجَّل</span></div></div>`:''}
+  ${shown.length?matrix(s):'<div class="none">لا يوجد رصد لهذا الطالب بعد في أي مادة.</div>'}</section>
+ <section class="card"><h2>شواهد الأثر <small>${m.nlinks} رابط · ${m.nvid} فيديو</small></h2><p class="sub">الفيديوهات أولاً. تُفتح الشواهد في صفحة مستقلة.</p>
+  ${evs.length?`<div class="ew">${evs.map(e=>`<div class="ev ${e.vid?'v':''}"><div class="h"><b>${e.subj}</b><span class="tg">${e.vid?'فيديو':'شاهد'}</span></div><div class="m">الدعم ${ORD[e.k-1]}${e.teacher?' · المعلم '+esc(e.teacher):''}</div>${e.sup?`<div class="tx">${esc(e.sup)}</div>`:''}${e.txt?`<div class="tx" style="color:var(--ink2)">${esc(e.txt)}</div>`:''}${e.urls.map((u,i)=>`<a class="play" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${isVid(u,e.txt)?PLAY+' شاهد الفيديو':'فتح الشاهد ↗'}${e.urls.length>1?' '+(i+1):''}</a>`).join('')}</div>`).join('')}</div>
+  <div class="note">تصنيف «فيديو» يُستدل عليه من نوع الرابط (ملف Drive أو يوتيوب أو MP4 أو رابط مختصر)، ولم يُتحقَّق من محتوى كل رابط.</div>`:'<div class="none">لا توجد روابط شواهد مسجّلة لهذا الطالب بعد.</div>'}</section>
+ <section class="card"><h2>تفاصيل كل مادة <small>المسار الكامل بالتسلسل</small></h2><p class="sub">التشخيصي، فالدعم المقدَّم والأثر والشاهد، فالتكويني.</p>
+  ${shown.map(subjBlock).join('')||'<div class="none">لا يوجد رصد بعد.</div>'}${shown.length&&rest.length?`<div class="note">مواد بلا رصد بعد: ${rest.join('، ')}.</div>`:''}</section>
+ <div class="foot">إعداد: حسين عجينه · وحدة الأثر · مدارس النبلاء الأهلية · الفترة الأولى</div>`;
+ window.scrollTo(0,0)}
+function route(){file(0);window.scrollTo(0,0)}
+
+window.addEventListener('hashchange',route);route();
+}
+</script>
+
+</body></html>
